@@ -110,12 +110,15 @@
                     <i class="material-icons-outlined">create_new_folder</i>
                   </a>
                   <x-button
-                    title="Import Connections"
+                    title="Import or export connections"
                   >
                     <i class="material-icons">save_alt</i>
                     <x-menu style="--align: end;">
-                      <x-menuitem @click.prevent="importFromComputer">
-                        <x-label>Import .json files into Saved Connections</x-label>
+                      <x-menuitem @click.prevent="importSavedConnections">
+                        <x-label>Import saved connections</x-label>
+                      </x-menuitem>
+                      <x-menuitem @click.prevent="exportSavedConnections">
+                        <x-label>Export saved connections</x-label>
                       </x-menuitem>
                       <x-menuitem
                         v-if="isCloud"
@@ -686,8 +689,11 @@ export default {
         sizes: this.sizes
       })
     },
-    importFromComputer() {
+    importSavedConnections() {
       this.$root.$emit(AppEvent.promptConnectionFilesImport)
+    },
+    exportSavedConnections() {
+      this.$root.$emit(AppEvent.promptConnectionExport)
     },
     importFromLocal() {
       this.$root.$emit(AppEvent.promptConnectionImport)

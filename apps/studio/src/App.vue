@@ -31,7 +31,8 @@
     <workspace-delete-modal />
     <import-queries-modal />
     <import-connections-modal />
-    <connection-files-import-modal />
+    <connection-import-modal />
+    <connection-export-modal />
     <plugin-controller :editor-font-size="editorFontSize" />
     <keyboard-shortcuts-modal />
     <theme-playground-modal />
@@ -102,7 +103,8 @@ import InputEphemeralModal from "@/components/common/modals/InputEphemeralModal.
 import ShareModal from "@/components/common/modals/ShareModal.vue";
 import MoveItemModal from "@/components/common/modals/MoveItemModal.vue";
 import MoveFolderModal from "@/components/common/modals/MoveFolderModal.vue";
-import ConnectionFilesImportModal from '@/components/common/modals/ConnectionFilesImportModal.vue'
+import ConnectionImportModal from '@/components/common/modals/ConnectionImportModal.vue'
+import ConnectionExportModal from '@/components/common/modals/ConnectionExportModal.vue'
 import ConnectionTypePickerModal from "@/components/common/modals/ConnectionTypePickerModal.vue";
 
 import rawLog from '@bksLogger'
@@ -122,7 +124,7 @@ export default Vue.extend({
     WorkspaceCreateModal, WorkspaceRenameModal, WorkspaceDeleteModal,
     ConfigurationWarningModal, PluginController, LockManager, KeyboardShortcutsModal, ThemePlaygroundModal, ConfigModal,
     InputEphemeralModal, ShareModal, MoveItemModal, MoveFolderModal,
-    ConnectionFilesImportModal, ConnectionTypePickerModal
+    ConnectionImportModal, ConnectionExportModal, ConnectionTypePickerModal
   },
   data() {
     return {
