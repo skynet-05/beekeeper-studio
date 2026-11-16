@@ -9,6 +9,7 @@ import platformInfo from '@/common/platform_info';
 import { AppDbHandlers } from '@/handlers/appDbHandlers';
 import { ConnHandlers } from '../backend/handlers/connHandlers';
 import { FileHandlers } from '@/handlers/fileHandlers';
+import { ConnectionTransferHandlers } from '@/handlers/connectionTransferHandlers';
 import { GeneratorHandlers } from '@/handlers/generatorHandlers';
 import { Handlers } from '../backend/handlers/handlers';
 import { newState, removeState, state } from '@/handlers/handlerState';
@@ -93,6 +94,7 @@ export const handlers: Handlers = {
   ...CliHandlers,
   ...AwsHandlers,
   ...FileHandlers,
+  ...ConnectionTransferHandlers,
   ...EnumHandlers,
   ...ThemeHandlers,
   ...TempHandlers,

@@ -36,6 +36,7 @@ export enum AppEvent {
   promptConnectionImport = 'cloud_c_import',
   promptSqlFilesImport = 'q_files_import',
   promptConnectionFilesImport = 'c_files_import',
+  promptConnectionExport = 'c_export',
   openCreateCollectionModal = 'create_collection_modal',
   openAddFieldModal = 'add_field_modal',
   enterLicense = 'enter_license',

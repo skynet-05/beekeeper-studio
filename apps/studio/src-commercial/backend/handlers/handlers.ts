@@ -14,6 +14,7 @@ import { IEnumHandlers } from "./enumHandlers";
 import { IThemeHandlers } from "@/handlers/themeHandlers";
 import { IAwsHandlers } from "./awsHandlers";
 import { IWorkspaceHandlers } from "@/handlers/workspaceHandlers";
+import { IConnectionTransferHandlers } from "@/handlers/connectionTransferHandlers";
 
 export interface Handlers
   extends IConnectionHandlers,
@@ -29,5 +30,6 @@ export interface Handlers
     ITempHandlers,
     IAwsHandlers,
     IWorkspaceHandlers,
-    IConfigHandlers
+    IConfigHandlers,
+    IConnectionTransferHandlers
     {}
